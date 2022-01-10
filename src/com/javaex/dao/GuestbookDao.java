@@ -49,8 +49,8 @@ public class GuestbookDao {
 	}
 	
 	// 리스트 가져오기
-		public List<GuestbookVo> getList() {
-			List<GuestbookVo> gList = new ArrayList<GuestbookVo>();
+		public List<GuestbookVo> gbList() {
+			List<GuestbookVo> getList = new ArrayList<GuestbookVo>();
 			getConnection();
 
 			try {
@@ -78,14 +78,14 @@ public class GuestbookDao {
 					vo.setRegDate(regDate);
 				  //Guestbookvo vo = new Guestbookvo(no, name, password, content, regDate);
 					
-					gList.add(vo);
+					getList.add(vo);
 				}
 			} catch (SQLException e) {
 				System.out.println("error: " + e);
 			}
 
 			close();
-			return gList;
+			return getList;
 		}
 		
 	// 등록
