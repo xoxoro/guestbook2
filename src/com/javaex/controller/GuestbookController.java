@@ -81,7 +81,7 @@ public class GuestbookController extends HttpServlet {
 			response.sendRedirect("/guestbook2/gbc?action=addList");
 
 		} else {
-			System.out.println("파라미터 없음");
+			System.out.println("잘못된 주소입니다.");
 		}
 
 		//System.out.println("GuestbookController");
